@@ -98,8 +98,6 @@ public class YandexSteps extends BasePageClass {
         List<String> namesList = marketSearchPage.getFoundItemNames();
         List<Integer> pricesList = marketSearchPage.getFoundItemPrices();
 
-       // namesList.forEach(System.out::println);
-
         for(String item : namesList) {
             boolean isNameAsFilter = item.toLowerCase().contains(brand.toLowerCase());
             Assertions.assertTrue(isNameAsFilter, item + " не подходит под именные фильтры");
